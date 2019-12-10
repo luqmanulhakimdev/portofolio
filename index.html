@@ -836,7 +836,8 @@
 
             <div class="row no-gutters block-9">
                 <div class="col-md-12 order-md-last d-flex">
-                    <form method="POST" action="mail.php" class="bg-light p-4 p-md-5 contact-form">
+                    <form action="" id="contact-form" class="bg-light p-4 p-md-5 contact-form">
+                         <input type="hidden" name="contact_number">
                         <div class="form-group">
                             <input type="text" name="name" class="form-control" placeholder="Your Name">
                         </div>
@@ -963,6 +964,29 @@
     <script src="js/scrollax.min.js"></script>
 
     <script src="js/main.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_dUL00yXO9tECguPKy6QRX");
+        })();
+    </script>
+
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate the contact number value
+                this.contact_number.value = Math.random() * 100000 | 0;
+                emailjs.sendForm('gmail', 'template_d24RVD2L', this)
+                .then(function(response) {
+                   alert('SUCCESS!');
+                }, function(error) {
+                   alert('FAILED...');
+                });
+            });
+        }
+    </script>
 
 </body>
 
