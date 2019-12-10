@@ -1,0 +1,24 @@
+.break-word {
+    word-wrap: break-word;
+}
+
+.link-linkedin:hover {
+    background-color: #2867B2;
+}
+
+.link-facebook:hover {
+    background-color: #4267B2;
+}
+
+.link-instagram:hover {
+    background-color: #E1306C;
+}
+
+.ftco-footer .ftco-footer-widget ul li:hover a span {
+    color: #FFFFFF;
+}
+
+.btn.btn-primary:hover {
+    background: #FFFFFF !important;
+    color: #3e64ff !important;
+}
