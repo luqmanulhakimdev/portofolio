@@ -1,242 +1,84 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
 <head>
-    <title>Luqmanul Hakim</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <meta property="og:locale" content="en_US">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Luqmanul Hakim // Software Engineer">
-    <meta property="og:description" content="Luqmanul Hakim.">
-    <meta property="og:url" content="https://luqmanulhakimdev.github.io/portofolio/">
-    <meta property="og:site_name" content="Luqmanul Hakim. Passionate Software Engineer with 5+ years of experience in developing web applications and backend systems.">
-
-    <link rel="icon" type="image/x-icon" href="images/ico.png">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #202020;
-            font-family: "Poppins", Arial, sans-serif;
-        }
-
-        main {
-            padding: 2em  10em;
-            color: #fff;
-            width: 100%;
-            box-sizing: border-box;
-            display: grid;
-            grid-template-columns: 70% 30%;
-        }
-
-        h1 {
-            font-size: 2em;
-        }
-
-        .content {
-            font-size: 18px;
-            grid-column: 1;
-            grid-row: 1;
-        }
-
-        .photo {
-            grid-column: 2;
-            grid-row: 1;
-        }
-
-        .photo > img {
-            width: 18em;
-            height: auto;
-            margin: 7em 5em;
-        }
-
-        nav {
-            display: flex;
-            justify-content:space-between; 
-            align-items: center;
-            padding: 1rem 2rem;
-            background: #292828; 
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none; 
-        }
-
-        nav li {
-            padding-left: 1rem; 
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #ffffff;
-            padding: 10px 12px;
-        }
-
-        nav a:hover {
-            opacity: 0.7;
-        }
-
-        .icon {
-            width: 50px;
-            height: auto;
-        }
-
-        .resume {
-            border: 1.5px solid #20df19;
-            border-radius: 5px;
-        }
-
-        .skills {
-            width: 40%;
-            columns: 2;
-            -webkit-columns: 2;
-            -moz-columns: 2;
-            font-size: 16px;
-        }
-
-        .skills > li {
-            margin: 5px 0;
-        }
-
-        .skills > li::marker {
-            color: #13880f;
-        }
-
-        .birth {
-            font-weight: bold;
-            color: #13880f;
-        }
-
-        .code {
-            color: #20df19;
-            text-decoration: underline;
-        }
-
-        .social-button {
-            margin: 70px 0 0 30px; 
-        }
-
-        .fa {
-            padding: 10px;
-            margin: 5px;
-            font-size: 24px;
-            width: 24px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            background: #2c4762;
-            color: #ffffff;
-        }
-
-        .fa:hover {
-            opacity: 0.7;
-        }
-
-        /* responsive */
-        @media only screen and (max-width: 600px) {
-            main {
-                padding: 1em;
-                grid-template-columns: 100%;
-            }
-
-            h1 {
-                font-size: 1.5em;
-            }
-
-            .content {
-                font-size: 14px;
-            }
-
-            nav {
-                padding: 10px;
-                font-size: 12px;
-            }
-
-            nav > li a {
-                padding: 5px 9px;
-            }
-
-            .icon {
-                width: 35px;
-            }
-
-            .skills {
-                width: 100%;
-                padding-left: 22px;
-                columns: 2;
-                -webkit-columns: 2;
-                -moz-columns: 2;
-                font-size: 12px;
-            }
-
-            .social-button {
-                margin: 0; 
-            }
-
-            .fa {
-                padding: 7px;
-                font-size: 20px;
-                width: 20px;
-            }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Luqmanul Hakim is a software engineer in Surabaya, Indonesia, building maintainable web applications and backend systems.">
+  <meta name="theme-color" content="#0b1117">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Luqmanul Hakim — Software Engineer">
+  <meta property="og:description" content="Software engineer building web applications and backend systems in Surabaya, Indonesia.">
+  <meta property="og:url" content="https://luqmanulhakimdev.github.io/portofolio/">
+  <meta property="og:image" content="https://luqmanulhakimdev.github.io/portofolio/images/me.jpeg">
+  <title>Luqmanul Hakim — Software Engineer</title>
+  <link rel="icon" type="image/png" href="images/ico.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <img class="icon" src="images/ico.png" alt="">
-        <ul>
-            <li style="float:right"><a href="mailto:luqmanulhakim.dev@gmail.com">Get In Touch</a></li>
-            <li style="float:right"><a class="resume" href="assets/cv/CV_Luqmanul Hakim.pdf" target="_blank">Resume</a></li>
-        </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="Luqmanul Hakim, home"><img src="images/ico.png" alt="" width="38" height="38"><span>LH<span class="brand-dot">.</span></span></a>
+      <div class="nav-links">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+      <a class="button button-small button-outline resume-link" href="assets/cv/CV_Luqmanul%20Hakim.pdf" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↗</span></a>
     </nav>
-    <main>
-        <div class="content">
-            <h1>Hey, I'm Luqmanul Hakim.</h1>
-            <div>
-                <p>
-                    Im a Software Engineer based in <span class="birth">Surabaya, Indonesia.</span> 
-                </p>
-                <p>
-                    Passionate Software Engineer with 7+ years of experience in developing web applications and backend systems.
-                    Skilled at writing clear, concise <span class="code">code</span> that is easy to maintain and troubleshoot. 
-                    Experienced in working with both small and large teams across multiple projects and companies.
-                </p>
-                <p>
-                    Seeking to leverage my programming and debugging skills to improve application scalability, reliability, and usability. 
-                    Committed to a culture of collaboration and excellence, with a dedication to staying up-to-date on the latest development standards and best practices.
-                </p>
-                <p>Here are a few technologies i've been working with recently:</p>
-                <ul class="skills">
-                    <li>PHP</li>
-                    <li>Golang</li>
-                    <li>Javascript</li>
-                    <li>Node.js</li>
-                    <li>Vue.js</li>
-                    <li>SQL</li>
-                    <li>GIT</li>
-                    <li>Redis</li>
-                    <li>Apache Kafka</li>
-                    <li>RabbitMQ</li>
-                    <li>Firebase</li>
-                    <li>Google Cloud Platform (GCP)</li>
-                    <li>Linux</li>
-                    <li>PostgreSQL</li>
-                </ul>
+  </header>
 
-                <div class="social-button">
-                    <a href="https://web.facebook.com/profile.php?id=61551891184067" target=”_blank” class="fa fa-facebook"></a>
-                    <a href="https://www.linkedin.com/in/luqmanul-hakim-44a753199/" target=”_blank” class="fa fa-linkedin"></a>
-                    <a href="https://github.com/luqmanulhakimdev" target=”_blank” class="fa fa-github"></a>
-                </div>
-            </div>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> SOFTWARE ENGINEER <span class="eyebrow-divider">/</span> SURABAYA, INDONESIA</p>
+        <h1 id="hero-title">Building thoughtful<br>software that <span class="accent-text">holds up.</span></h1>
+        <p class="hero-intro">I’m Luqmanul Hakim, a software engineer focused on reliable web applications and backend systems. I care about clear code, useful collaboration, and the details that make software easier to maintain.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">Explore projects <span aria-hidden="true">↓</span></a><a class="text-link" href="mailto:luqmanulhakim.dev@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-social"><a href="https://github.com/luqmanulhakimdev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/luqmanul-hakim-44a753199/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-frame"><img src="images/me.jpeg" alt="Luqmanul Hakim outdoors in the mountains" width="460" height="460"></div>
+        <div class="visual-note"><span class="note-mark" aria-hidden="true">↳</span><span>Web applications<br>&amp; backend systems</span></div>
+        <div class="orbit orbit-one" aria-hidden="true"></div><div class="orbit orbit-two" aria-hidden="true"></div>
+      </div>
+      <a class="scroll-cue" href="#about"><span class="scroll-line" aria-hidden="true"></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <div class="section-heading"><p class="eyebrow">01 / A LITTLE ABOUT ME</p><h2 id="about-title">Engineering with <span class="accent-text">care.</span></h2></div>
+      <div class="about-grid"><p class="about-lead">I’ve spent 7+ years developing web applications and backend systems, working across projects and with teams of different sizes.</p><div class="about-detail"><p>I enjoy making software easier to understand, maintain, and troubleshoot. My work spans backend services and web experiences, with a steady focus on reliability, scalability, and practical engineering choices.</p><p>Good software is a team effort. I value collaboration, clear communication, and continuing to learn better ways to build.</p></div></div>
+    </section>
+
+    <section class="section section-bordered" id="skills" aria-labelledby="skills-title">
+      <div class="container"><div class="section-heading"><p class="eyebrow">02 / TOOLKIT</p><h2 id="skills-title">Technologies I <span class="accent-text">work with.</span></h2><p class="section-intro">A selection of tools and technologies from my experience.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card"><span class="card-index">01</span><h3>Backend development</h3><ul class="tag-list"><li>PHP</li><li>Golang</li><li>Node.js</li></ul></article>
+          <article class="skill-card"><span class="card-index">02</span><h3>Frontend development</h3><ul class="tag-list"><li>JavaScript</li><li>Vue.js</li></ul></article>
+          <article class="skill-card"><span class="card-index">03</span><h3>Data &amp; caching</h3><ul class="tag-list"><li>SQL</li><li>PostgreSQL</li><li>Redis</li></ul></article>
+          <article class="skill-card"><span class="card-index">04</span><h3>Messaging systems</h3><ul class="tag-list"><li>Apache Kafka</li><li>RabbitMQ</li></ul></article>
+          <article class="skill-card"><span class="card-index">05</span><h3>Cloud &amp; infrastructure</h3><ul class="tag-list"><li>Google Cloud Platform</li><li>Firebase</li><li>Linux</li></ul></article>
+          <article class="skill-card"><span class="card-index">06</span><h3>Tools &amp; workflow</h3><ul class="tag-list"><li>Git</li></ul></article>
         </div>
-        <!-- <div class="photo">
-            <img src="images/me.jpeg" alt="">
-        </div> -->
-    </main>
+      </div>
+    </section>
+
+    <section class="section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading project-heading"><div><p class="eyebrow">03 / SELECTED WORK</p><h2 id="projects-title">Projects &amp; <span class="accent-text">experiments.</span></h2></div><a class="text-link" href="https://github.com/luqmanulhakimdev" target="_blank" rel="noopener noreferrer">More on GitHub <span aria-hidden="true">↗</span></a></div>
+      <p class="section-intro project-intro">A few repositories from my learning and project work.</p>
+      <div class="projects-grid">
+        <article class="project-card"><div class="project-top"><span class="project-number">01</span><span class="project-arrow" aria-hidden="true">↗</span></div><p class="project-kind">PROGRESSIVE WEB APP</p><h3>learn-pwa</h3><p>A project exploring progressive web application development.</p><a class="project-link" href="https://github.com/luqmanulhakimdev/learn-pwa" target="_blank" rel="noopener noreferrer" aria-label="View learn-pwa repository on GitHub">View repository <span aria-hidden="true">↗</span></a></article>
+        <article class="project-card"><div class="project-top"><span class="project-number">02</span><span class="project-arrow" aria-hidden="true">↗</span></div><p class="project-kind">GO · RPC</p><h3>go-grpc</h3><p>A Go project exploring gRPC.</p><a class="project-link" href="https://github.com/luqmanulhakimdev/go-grpc" target="_blank" rel="noopener noreferrer" aria-label="View go-grpc repository on GitHub">View repository <span aria-hidden="true">↗</span></a></article>
+        <article class="project-card"><div class="project-top"><span class="project-number">03</span><span class="project-arrow" aria-hidden="true">↗</span></div><p class="project-kind">NODE.JS · WEB</p><h3>learn-expressjs</h3><p>A learning project focused on Express.js.</p><a class="project-link" href="https://github.com/luqmanulhakimdev/learn-expressjs" target="_blank" rel="noopener noreferrer" aria-label="View learn-expressjs repository on GitHub">View repository <span aria-hidden="true">↗</span></a></article>
+        <article class="project-card"><div class="project-top"><span class="project-number">04</span><span class="project-arrow" aria-hidden="true">↗</span></div><p class="project-kind">DATABASE PROJECT</p><h3>DB-Klinik</h3><p>A clinic database project.</p><a class="project-link" href="https://github.com/luqmanulhakimdev/DB-Klinik" target="_blank" rel="noopener noreferrer" aria-label="View DB-Klinik repository on GitHub">View repository <span aria-hidden="true">↗</span></a></article>
+      </div>
+      <p class="project-note">Repository descriptions and technologies are kept intentionally brief; details can be expanded as project documentation is reviewed.</p>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="container contact-content"><p class="eyebrow">04 / LET’S CONNECT</p><h2 id="contact-title">Have a good problem<br>to <span class="accent-text">solve?</span></h2><p>I’m always glad to talk about engineering, collaboration, or interesting ideas.</p><a class="button button-primary" href="mailto:luqmanulhakim.dev@gmail.com">luqmanulhakim.dev@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-social"><a href="https://github.com/luqmanulhakimdev" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/luqmanul-hakim-44a753199/" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://web.facebook.com/profile.php?id=61551891184067" target="_blank" rel="noopener noreferrer">Facebook <span aria-hidden="true">↗</span></a></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-name" href="#top">Luqmanul Hakim<span class="brand-dot">.</span></a><p>Software Engineer <span aria-hidden="true">·</span> Surabaya, Indonesia</p><p>© <span id="year">2026</span> Luqmanul Hakim</p></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
