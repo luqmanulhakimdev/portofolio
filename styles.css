@@ -137,7 +137,7 @@ h2 { margin-bottom: 10px; font-size: clamp(31px, 3.6vw, 44px); font-weight: 600;
   .orbit-one { width: 310px; height: 310px; }
   .orbit-two { width: 360px; height: 360px; }
   .visual-note { right: 2px; bottom: 18px; }
-  .hero-social { margin-top: 34px; }
+  .hero-social { margin-top: 34px; flex-wrap: wrap; gap: 18px; }
   .scroll-cue { bottom: 20px; }
   .section { padding-block: 75px; }
   .section-heading { margin-bottom: 31px; }
@@ -169,7 +169,7 @@ h2 { margin-bottom: 10px; font-size: clamp(31px, 3.6vw, 44px); font-weight: 600;
   .nav-links a { font-size: 10px; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 205px; }
-  .contact-social { gap: 16px; }
+  .contact-social { gap: 16px; flex-wrap: wrap; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
