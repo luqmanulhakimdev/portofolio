@@ -29,13 +29,19 @@
     <nav class="nav container" aria-label="Main navigation">
       <a class="brand" href="#top" aria-label="Luqmanul Hakim, home"><img src="images/ico.png" alt="" width="38"
           height="38"><span>LH<span class="brand-dot">.</span></span></a>
-      <div class="nav-links">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a class="nav-game-link" href="game.html" title="Play Byte Runner mini-game">🎮 Bored? Try my game</a><a class="nav-intermezzo-link" href="intermezzo.html" title="Intermezzo — Running &amp; Mountain Trails">☕ Intermezzo</a>
+      <div class="nav-links" id="primary-nav">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a><a class="nav-game-link" href="game.html" title="Play Byte Runner mini-game">🎮 Bored? Try my game</a><a class="nav-intermezzo-link" href="intermezzo.html" title="Intermezzo — Running &amp; Mountain Trails">☕ Intermezzo</a><a class="button button-small button-outline nav-resume-mobile" href="assets/cv/CV_Luqmanul_Hakim.pdf" download="CV_Luqmanul_Hakim.pdf" target="_blank" rel="noopener noreferrer">Resume <span aria-hidden="true">↓</span></a>
       </div>
       <a class="button button-small button-outline resume-link" href="assets/cv/CV_Luqmanul_Hakim.pdf" download="CV_Luqmanul_Hakim.pdf" target="_blank"
         rel="noopener noreferrer">Resume <span aria-hidden="true">↓</span></a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </nav>
   </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <main id="main">
     <section class="hero container" id="top" aria-labelledby="hero-title">
@@ -514,7 +520,69 @@
       <p>© <span id="year">2026</span> Luqmanul Hakim</p>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile Navigation Toggle
+    (function () {
+      const toggle = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('primary-nav');
+      const backdrop = document.getElementById('nav-backdrop');
+
+      if (!toggle || !navLinks) return;
+
+      function openMenu() {
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+        navLinks.classList.add('is-open');
+        if (backdrop) backdrop.classList.add('is-active');
+        document.body.classList.add('nav-open');
+      }
+
+      function closeMenu() {
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('is-open');
+        if (backdrop) backdrop.classList.remove('is-active');
+        document.body.classList.remove('nav-open');
+      }
+
+      toggle.addEventListener('click', function () {
+        const isOpen = toggle.classList.contains('is-active');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      if (backdrop) {
+        backdrop.addEventListener('click', closeMenu);
+      }
+
+      // Close menu when clicking any nav link
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          closeMenu();
+        });
+      });
+
+      // Close menu on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && toggle.classList.contains('is-active')) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      // Close menu if window is resized past mobile breakpoint
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768 && toggle.classList.contains('is-active')) {
+          closeMenu();
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>

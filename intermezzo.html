@@ -188,6 +188,79 @@
       transform: translateY(-2px);
     }
 
+    .nav-back-mobile,
+    .btn-portfolio-back.nav-back-mobile {
+      display: none;
+    }
+
+    .nav-backdrop {
+      display: none;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 5px;
+      transition: border-color 0.2s ease, background 0.2s ease;
+      z-index: 60;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .nav-toggle:hover {
+      border-color: var(--mint);
+      background: rgba(131, 224, 192, 0.08);
+    }
+
+    .nav-toggle:focus-visible {
+      outline: 2px solid var(--mint);
+      outline-offset: 2px;
+    }
+
+    .hamburger-line {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease, background-color 0.2s ease;
+      transform-origin: center;
+    }
+
+    .nav-toggle:hover .hamburger-line {
+      background: var(--mint);
+    }
+
+    .nav-toggle.is-active {
+      border-color: var(--mint);
+      background: rgba(131, 224, 192, 0.1);
+    }
+
+    .nav-toggle.is-active .hamburger-line {
+      background: var(--mint);
+    }
+
+    .nav-toggle.is-active .hamburger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle.is-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav-toggle.is-active .hamburger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
     /* Intermezzo Hero Header */
     .hero-intermezzo {
       position: relative;
@@ -731,6 +804,14 @@
 
     /* Responsive Breakpoints */
     @media (max-width: 960px) {
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
       .story-row,
       .story-row.reversed {
         grid-template-columns: 1fr;
@@ -755,19 +836,115 @@
       }
     }
 
-    @media (max-width: 640px) {
-      .nav-links {
-        gap: 12px;
-      }
-
-      .nav-links a {
-        font-size: 11px;
+    @media (max-width: 768px) {
+      body.nav-open {
+        overflow: hidden;
       }
 
       .btn-portfolio-back {
         display: none;
       }
 
+      .nav-toggle {
+        display: flex;
+      }
+
+      .nav-backdrop {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(5, 9, 13, 0.7);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        z-index: 40;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+      }
+
+      .nav-backdrop.is-active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(11, 17, 23, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+        flex-direction: column;
+        align-items: stretch;
+        padding: 16px 20px 24px;
+        gap: 4px;
+        max-height: calc(100vh - 76px);
+        overflow-y: auto;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+        pointer-events: none;
+        z-index: 50;
+      }
+
+      .nav-links.is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .nav-links a {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text);
+        padding: 12px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus-visible {
+        color: var(--mint);
+        background: rgba(131, 224, 192, 0.08);
+        transform: translateX(4px);
+      }
+
+      .nav-game-link,
+      .nav-intermezzo-link {
+        margin-top: 4px;
+        justify-content: flex-start;
+        padding: 11px 14px !important;
+        font-size: 13px !important;
+        border-radius: 8px !important;
+      }
+
+      .nav-game-link:hover,
+      .nav-intermezzo-link:hover {
+        transform: translateX(4px) !important;
+      }
+
+      .nav-back-mobile,
+      .btn-portfolio-back.nav-back-mobile {
+        display: inline-flex;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        min-height: 44px;
+      }
+    }
+
+    @media (max-width: 640px) {
       .hero-intermezzo {
         padding-top: 55px;
         padding-bottom: 50px;
@@ -808,7 +985,7 @@
         <img src="images/ico.png" alt="" width="36" height="36">
         <span>LH<span class="brand-dot">.</span></span>
       </a>
-      <div class="nav-links">
+      <div class="nav-links" id="primary-nav">
         <a href="index.html#about">About</a>
         <a href="index.html#skills">Skills</a>
         <a href="index.html#experience">Experience</a>
@@ -816,10 +993,17 @@
         <a href="index.html#contact">Contact</a>
         <a class="nav-game-link" href="game.html" title="Play Byte Runner mini-game">🎮 Bored? Try my game</a>
         <a class="nav-intermezzo-link active" href="intermezzo.html">☕ Intermezzo</a>
+        <a class="btn-portfolio-back nav-back-mobile" href="index.html">← Back to Portfolio</a>
       </div>
       <a class="btn-portfolio-back" href="index.html">← Back to Portfolio</a>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primary-nav">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
     </nav>
   </header>
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
 
   <!-- Hero Banner -->
   <header class="hero-intermezzo">
@@ -1171,6 +1355,63 @@
         });
       });
     }
+
+    // Mobile Navigation Toggle
+    (function () {
+      const toggle = document.getElementById('nav-toggle');
+      const navLinks = document.getElementById('primary-nav');
+      const backdrop = document.getElementById('nav-backdrop');
+
+      if (!toggle || !navLinks) return;
+
+      function openMenu() {
+        toggle.classList.add('is-active');
+        toggle.setAttribute('aria-expanded', 'true');
+        navLinks.classList.add('is-open');
+        if (backdrop) backdrop.classList.add('is-active');
+        document.body.classList.add('nav-open');
+      }
+
+      function closeMenu() {
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+        navLinks.classList.remove('is-open');
+        if (backdrop) backdrop.classList.remove('is-active');
+        document.body.classList.remove('nav-open');
+      }
+
+      toggle.addEventListener('click', function () {
+        const isOpen = toggle.classList.contains('is-active');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      });
+
+      if (backdrop) {
+        backdrop.addEventListener('click', closeMenu);
+      }
+
+      navLinks.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          closeMenu();
+        });
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && toggle.classList.contains('is-active')) {
+          closeMenu();
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768 && toggle.classList.contains('is-active')) {
+          closeMenu();
+        }
+      });
+    })();
   </script>
 </body>
 
