@@ -322,6 +322,13 @@ a {
 
 .chip-badge span.icon {
   font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chip-badge span.icon svg {
+  display: block;
 }
 
 .chip-badge strong {
@@ -484,6 +491,17 @@ a {
 .photo-floating-meta strong {
   color: var(--text);
   font-weight: 600;
+}
+
+.photo-floating-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.photo-floating-meta span svg {
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .photo-floating-meta .zoom-cue {
