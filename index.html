@@ -80,19 +80,20 @@
       <a class="scroll-cue" href="#about"><span class="scroll-line" aria-hidden="true"></span> SCROLL TO EXPLORE</a>
     </section>
 
-    <section class="section container" id="about" aria-labelledby="about-title">
+    <section class="section container about-section" id="about" aria-labelledby="about-title">
+      <canvas id="neuralCanvas" class="neural-bg-canvas" aria-hidden="true"></canvas>
+
       <div class="section-heading">
         <p class="eyebrow">01 / A LITTLE ABOUT ME</p>
         <h2 id="about-title">Engineering with <span class="accent-text">care.</span></h2>
       </div>
-      <div class="about-grid">
-        <p class="about-lead">I’ve spent 9+ years developing web applications and backend systems, working across
-          projects and with teams of different sizes.</p>
+
+      <div class="about-content">
+        <p class="about-lead">I’ve spent 9+ years developing web applications and backend systems, working across projects and with teams of different sizes.</p>
         <div class="about-detail">
-          <p>I enjoy making software easier to understand, maintain, and troubleshoot. My work spans backend services
-            and web experiences, with a steady focus on reliability, scalability, and practical engineering choices.</p>
-          <p>Good software is a team effort. I value collaboration, clear communication, and continuing to learn better
-            ways to build.</p>
+          <p>Over the past nine years, my engineering journey has centered around building dependable backend architectures, payment gateways, and transaction-intensive platforms. I treat software engineering as the art of making complex systems predictable—crafting code that gracefully handles high throughput, intermittent third-party outages, and network retries while upholding strict data integrity and consistency.</p>
+          <p>I have a deep appreciation for clean, layered architecture and operational observability. Experience has taught me that software is maintained far longer than it is built; thus, clear separation of concerns, structured error handling, and end-to-end metrics make all the difference. From designing microservices in Go and Node.js to monitoring with Grafana, Prometheus, and Dead Letter Queues, I ensure systems are transparent and resilient before problems reach users.</p>
+          <p>Beyond code, I believe exceptional engineering is fundamentally a collaborative craft. I thrive when translating nuanced business requirements into elegant API contracts alongside product managers and cross-functional teams. I value clear technical documentation, constructive code reviews, and cultivating sustainable engineering practices that help teams build and scale reliable software with confidence.</p>
         </div>
       </div>
     </section>
@@ -186,37 +187,37 @@
       </div>
 
       <div class="experience-timeline">
-        <!-- Amartha Financial -->
+        <!-- PT Amartha Mikro Fintek -->
         <article class="exp-card">
           <div class="exp-header">
-            <div class="exp-company-badge amartha-badge" aria-label="Amartha Financial">AF</div>
+            <div class="exp-company-badge amartha-badge" aria-label="PT Amartha Mikro Fintek">AMF</div>
             <div class="exp-header-text">
               <div class="exp-company-line">
-                <h3 class="exp-company">Amartha Financial</h3>
+                <h3 class="exp-company">PT Amartha Mikro Fintek</h3>
                 <span class="exp-type-badge">Full-time · 5 yrs 2 mos</span>
               </div>
-              <p class="exp-location">Surabaya, East Java, Indonesia</p>
+              <p class="exp-location">Surabaya, Indonesia · On-site</p>
             </div>
           </div>
 
           <div class="exp-subroles">
-            <!-- Role 1 -->
+            <!-- Payment Platform Team -->
             <div class="exp-subrole">
               <div class="exp-subrole-bullet" aria-hidden="true"></div>
               <div class="exp-subrole-content">
                 <div class="exp-role-meta">
-                  <h4 class="exp-role-title">Software Engineer - Payment Platform</h4>
+                  <h4 class="exp-role-title">Software Engineer - Payment Platform Team</h4>
                   <div class="exp-period-badge">
                     <span>Sep 2025 – Oct 2026 · 1 yr 2 mos</span>
                     <span class="exp-workmode">On-site</span>
                   </div>
                 </div>
                 <ul class="exp-highlights">
-                  <li>Refactored Transaction V2 architecture by integrating payment and payout adapters, enabling unified processing for disbursement and bank transfer transactions.</li>
-                  <li>Established system observability by designing and implementing metrics and alerting across consumer services and background jobs.</li>
-                  <li>Integrated BCA Virtual Account H2H APIs to enable seamless Virtual Account top-up transactions.</li>
-                  <li>Strengthened transaction reliability and fault tolerance by enhancing retry mechanisms and DLQ processing.</li>
-                  <li>Streamlined transaction experience by improving Global Transaction History and Payment Widget, while migrating legacy transaction flows to a unified single API.</li>
+                  <li>Refactored the Transaction V2 architecture by integrating payment and payout adapters into a unified transaction flow, enabling standardized disbursement and bank transfer processing across multiple payment channels.</li>
+                  <li>Designed and implemented system observability through metrics, monitoring, and alerting across consumer services and background jobs, improving visibility into system health, transaction processing, and potential failures.</li>
+                  <li>Integrated BCA Virtual Account Host-to-Host APIs to enable Virtual Account top-up transactions, including transaction processing, status handling, and integration with existing payment flows.</li>
+                  <li>Improved transaction reliability and fault tolerance by enhancing retry mechanisms and Dead Letter Queue (DLQ) processing to handle transient failures and ensure failed transactions could be properly recovered and reprocessed.</li>
+                  <li>Enhanced the Global Transaction History and Payment Widget, while migrating legacy transaction flows to a single API, simplifying transaction integration and improving consistency across products and services.</li>
                 </ul>
                 <div class="exp-skills">
                   <span class="exp-skill-label" aria-hidden="true">
@@ -224,31 +225,35 @@
                     Skills:
                   </span>
                   <ul class="tag-list">
-                    <li>Grafana</li>
-                    <li>Apache Kafka</li>
                     <li>Golang</li>
-                    <li>Observability &amp; DLQ</li>
-                    <li>Payment Architecture</li>
+                    <li>PostgreSQL</li>
+                    <li>Elasticsearch</li>
+                    <li>Kafka</li>
+                    <li>Redis</li>
+                    <li>Docker</li>
+                    <li>REST API</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Role 2 -->
+            <!-- New Retail / Agent Network Team -->
             <div class="exp-subrole">
               <div class="exp-subrole-bullet" aria-hidden="true"></div>
               <div class="exp-subrole-content">
                 <div class="exp-role-meta">
-                  <h4 class="exp-role-title">Software Engineer - New Retail /Agent Network</h4>
+                  <h4 class="exp-role-title">Software Engineer - New Retail / Agent Network Team</h4>
                   <div class="exp-period-badge">
                     <span>Sep 2021 – Sep 2025 · 4 yrs 1 mo</span>
-                    <span class="exp-workmode">Remote</span>
+                    <span class="exp-workmode">On-site</span>
                   </div>
                 </div>
                 <ul class="exp-highlights">
-                  <li>Collaborated as part of the New Retail/Agent Network team under the Payment business unit.</li>
-                  <li>Handled and enhanced key products including agent onboarding, PPOB (Payment Point Online Bank), and several agent transaction features such as loan repayment, remittance, withdrawal, pocket top-up, and cashback incentive management.</li>
-                  <li>Integrated payment services with multiple internal services across teams as well as with third-party PPOB vendors such as Alterra, GoTo, and others.</li>
+                  <li>Contributed to the development of New Retail / Agent Network solutions within the Payments business unit, focusing on scalable payment and financial transaction services for agent networks.</li>
+                  <li>Developed and enhanced agent onboarding and PPOB services covering loan repayment, remittance, withdrawal, and pocket top-up, supporting end-to-end agent transaction workflows.</li>
+                  <li>Designed and implemented payment service integrations with internal systems and third-party PPOB providers, including Alterra, GoTo, and Sakalaguna, enabling reliable transaction processing across multiple payment channels.</li>
+                  <li>Designed and developed a Cashback &amp; Incentive Management feature to manage agent reward programs, including incentive configuration, cashback calculation, eligibility rules, and transaction-based incentive tracking.</li>
+                  <li>Designed and implemented a Digital Ledger to maintain agents’ financial transaction records, including debit/credit entries, balance tracking, and transaction history, supporting accurate reconciliation and financial reporting.</li>
                 </ul>
                 <div class="exp-skills">
                   <span class="exp-skill-label" aria-hidden="true">
@@ -256,11 +261,13 @@
                     Skills:
                   </span>
                   <ul class="tag-list">
-                    <li>Google Cloud Platform (GCP)</li>
                     <li>Golang</li>
-                    <li>PPOB &amp; Billers</li>
-                    <li>Microservices</li>
-                    <li>Event Driven</li>
+                    <li>PostgreSQL</li>
+                    <li>MongoDB</li>
+                    <li>Kafka</li>
+                    <li>Redis</li>
+                    <li>REST API</li>
+                    <li>Google Cloud Platform</li>
                   </ul>
                 </div>
               </div>
@@ -271,13 +278,13 @@
         <!-- PT Nusantara Sukses Teknologi (Nusatek.id) -->
         <article class="exp-card">
           <div class="exp-header">
-            <div class="exp-company-badge nusatek-badge" aria-label="Nusatek.id">NST</div>
+            <div class="exp-company-badge nusatek-badge" aria-label="PT Nusantara Sukses Teknologi (Nusatek.id)">NST</div>
             <div class="exp-header-text">
               <div class="exp-company-line">
                 <h3 class="exp-company">PT Nusantara Sukses Teknologi (Nusatek.id)</h3>
-                <span class="exp-type-badge">Freelance · 3 mos</span>
+                <span class="exp-type-badge">Remote Freelance · 3 mos</span>
               </div>
-              <p class="exp-location">Surabaya, East Java, Indonesia · Remote</p>
+              <p class="exp-location">Surabaya, Indonesia · Remote Freelance</p>
             </div>
           </div>
           <div class="exp-single-body">
@@ -285,10 +292,15 @@
               <h4 class="exp-role-title">Back End Engineer</h4>
               <div class="exp-period-badge">
                 <span>Dec 2021 – Feb 2022 · 3 mos</span>
-                <span class="exp-workmode">Remote</span>
+                <span class="exp-workmode">Remote Freelance</span>
               </div>
             </div>
-            <p class="exp-summary">Developed and maintained backend services and relational data models with Golang and PostgreSQL for client production workflows.</p>
+            <ul class="exp-highlights">
+              <li>Contributed to the end-to-end backend refactoring of MOaja, a Smart Living and Property Technology platform, using Golang and PostgreSQL.</li>
+              <li>Architected and restructured the application codebase from the ground up into a clean, layered architecture consisting of Usecase, Repository, and Controller layers.</li>
+              <li>Enforced clear separation of concerns across business logic, persistent data access, and HTTP request handling to enhance modularity.</li>
+              <li>Developed reusable base utility functions and standardized database interactions using PostgreSQL, substantially improving code maintainability and team consistency.</li>
+            </ul>
             <div class="exp-skills">
               <span class="exp-skill-label" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
@@ -297,7 +309,8 @@
               <ul class="tag-list">
                 <li>Golang</li>
                 <li>PostgreSQL</li>
-                <li>RESTful API</li>
+                <li>Redis</li>
+                <li>REST API</li>
               </ul>
             </div>
           </div>
@@ -312,31 +325,69 @@
                 <h3 class="exp-company">TwisCode Pte. Ltd.</h3>
                 <span class="exp-type-badge">Full-time · 1 yr 8 mos</span>
               </div>
-              <p class="exp-location">Surabaya, East Java, Indonesia · On-site</p>
+              <p class="exp-location">Surabaya, Indonesia · On-site</p>
             </div>
           </div>
-          <div class="exp-single-body">
-            <div class="exp-role-meta">
-              <h4 class="exp-role-title">Back End Engineer</h4>
-              <div class="exp-period-badge">
-                <span>Jan 2020 – Aug 2021 · 1 yr 8 mos</span>
-                <span class="exp-workmode">On-site</span>
+          <div class="exp-subroles">
+            <!-- Sidely CRM Platform -->
+            <div class="exp-subrole">
+              <div class="exp-subrole-bullet" aria-hidden="true"></div>
+              <div class="exp-subrole-content">
+                <div class="exp-role-meta">
+                  <h4 class="exp-role-title">Backend Engineer – Sidely CRM Platform</h4>
+                  <div class="exp-period-badge">
+                    <span class="exp-workmode">CRM &amp; SFA</span>
+                  </div>
+                </div>
+                <p class="exp-summary">Contributed to building Sidely, a CRM and Sales Force Automation (SFA) platform designed to help businesses manage customer relationships, sales operations, and field activities.</p>
+                <ul class="exp-highlights">
+                  <li>Built the CRM backend from the ground up using Node.js.</li>
+                  <li>Designed and developed core CRM functionalities for managing customers, contacts, sales activities, and business data.</li>
+                  <li>Architected and developed a dynamic Form Builder engine from scratch, implementing configurable form structures, dynamic field definitions, and form submission management.</li>
+                  <li>Developed reusable backend components and business logic to support flexible product configurations and customizable business workflows.</li>
+                </ul>
+                <div class="exp-skills">
+                  <span class="exp-skill-label" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Skills:
+                  </span>
+                  <ul class="tag-list">
+                    <li>Node.js</li>
+                    <li>MySQL</li>
+                    <li>REST API</li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <ul class="exp-highlights">
-              <li>Developed and maintain diverse projects for both domestic and international clients, including sales management systems, car auction websites, and various management information systems.</li>
-            </ul>
-            <div class="exp-skills">
-              <span class="exp-skill-label" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                Skills:
-              </span>
-              <ul class="tag-list">
-                <li>Node.js</li>
-                <li>Golang</li>
-                <li>MySQL</li>
-                <li>RESTful API</li>
-              </ul>
+
+            <!-- DjuBli Automotive Marketplace -->
+            <div class="exp-subrole">
+              <div class="exp-subrole-bullet" aria-hidden="true"></div>
+              <div class="exp-subrole-content">
+                <div class="exp-role-meta">
+                  <h4 class="exp-role-title">Backend Engineer – DjuBli Automotive Marketplace</h4>
+                  <div class="exp-period-badge">
+                    <span class="exp-workmode">Marketplace &amp; Auction</span>
+                  </div>
+                </div>
+                <p class="exp-summary">Contributed to the development of DjuBli, an automotive marketplace platform for buying and selling new and used vehicles, including an online vehicle auction system.</p>
+                <ul class="exp-highlights">
+                  <li>Developed backend services and APIs using Node.js and MySQL supporting vehicle listings, buyer and seller interactions, and marketplace operations.</li>
+                  <li>Contributed to the development of the online vehicle auction platform, supporting backend data management and transaction workflows.</li>
+                  <li>Developed and maintained APIs for marketplace business processes.</li>
+                </ul>
+                <div class="exp-skills">
+                  <span class="exp-skill-label" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Skills:
+                  </span>
+                  <ul class="tag-list">
+                    <li>Node.js</li>
+                    <li>MySQL</li>
+                    <li>REST API</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </article>
@@ -350,7 +401,7 @@
                 <h3 class="exp-company">Rigel Digital Solusi Indonesia</h3>
                 <span class="exp-type-badge">Full-time · 2 yrs 8 mos</span>
               </div>
-              <p class="exp-location">Surabaya, East Java, Indonesia · On-site</p>
+              <p class="exp-location">Surabaya, Indonesia · On-site</p>
             </div>
           </div>
           <div class="exp-single-body">
@@ -362,10 +413,9 @@
               </div>
             </div>
             <ul class="exp-highlights">
-              <li>Developed a customized ERP system for a property client, enhancing operational efficiency and resource management.</li>
-              <li>Designed, implemented, and maintained a Point of Sales (POS) system for a minimarket client, ensuring stability and high performance for daily operations.</li>
-              <li>Created and designed company profile websites for various national clients, delivering professional, responsive, and user-friendly web solutions.</li>
-              <li>Built and deployed a marketplace website, integrating product listings, transaction systems, and customer engagement features.</li>
+              <li>Built a customized ERP system for a property client to support operational efficiency and resource management.</li>
+              <li>Designed and maintained a Point of Sale (POS) system for a minimarket client, focusing on stability and performance.</li>
+              <li>Delivered responsive company websites and a marketplace with product listings, transaction workflows, and customer engagement features.</li>
             </ul>
             <div class="exp-skills">
               <span class="exp-skill-label" aria-hidden="true">
@@ -373,11 +423,14 @@
                 Skills:
               </span>
               <ul class="tag-list">
-                <li>Vue.js</li>
                 <li>PHP</li>
                 <li>Laravel</li>
-                <li>Full Stack</li>
-                <li>MySQL</li>
+                <li>CodeIgniter</li>
+                <li>Vue.js</li>
+                <li>jQuery</li>
+                <li>OracleDB</li>
+                <li>SQL Server</li>
+                <li>REST API</li>
               </ul>
             </div>
           </div>
@@ -495,6 +548,46 @@
           <p>A classic snake game implementation built with Python and Pygame.</p><a class="project-link"
             href="https://github.com/luqmanulhakimdev/python-snake-game" target="_blank" rel="noopener noreferrer"
             aria-label="View python-snake-game repository on GitHub">View repository <span
+              aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">11</span><span class="project-arrow"
+              aria-hidden="true">↗</span></div>
+          <p class="project-kind">PYTHON · AI AGENT · RAG</p>
+          <h3>local-hermes-ai</h3>
+          <p>A local-first AI engineering laboratory featuring autonomous tool-calling agents, SQLite memory, and an evaluation-backed RAG document Q&amp;A pipeline using Ollama.
+          </p><a class="project-link" href="https://github.com/luqmanulhakimdev/local-hermes-ai" target="_blank"
+            rel="noopener noreferrer" aria-label="View local-hermes-ai repository on GitHub">View repository <span
+              aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">12</span><span class="project-arrow"
+              aria-hidden="true">↗</span></div>
+          <p class="project-kind">NEXT.JS · TYPESCRIPT · TAILWIND</p>
+          <h3>tykket</h3>
+          <p>A fast, keyboard-first issue tracking and project management frontend inspired by Linear, featuring command palette, real-time updates, and Kanban boards.
+          </p><a class="project-link" href="https://github.com/luqmanulhakimdev/tykket" target="_blank"
+            rel="noopener noreferrer" aria-label="View tykket repository on GitHub">View repository <span
+              aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">13</span><span class="project-arrow"
+              aria-hidden="true">↗</span></div>
+          <p class="project-kind">GO · CLEAN ARCHITECTURE · POSTGRESQL</p>
+          <h3>tykket-go</h3>
+          <p>A high-performance work management and issue tracking backend API built with Go, Clean Architecture, Echo, PostgreSQL pgxpool, JWT RBAC, and sprint lifecycles.
+          </p><a class="project-link" href="https://github.com/luqmanulhakimdev/tykket-go" target="_blank"
+            rel="noopener noreferrer" aria-label="View tykket-go repository on GitHub">View repository <span
+              aria-hidden="true">↗</span></a>
+        </article>
+        <article class="project-card">
+          <div class="project-top"><span class="project-number">14</span><span class="project-arrow"
+              aria-hidden="true">↗</span></div>
+          <p class="project-kind">FLUTTER · DART · MVVM</p>
+          <h3>flutter-mvvm</h3>
+          <p>A production-ready Flutter boilerplate implementing the MVVM pattern with strict separation of concerns, local persistent CRUD storage, and high test coverage.
+          </p><a class="project-link" href="https://github.com/luqmanulhakimdev/flutter-mvvm" target="_blank"
+            rel="noopener noreferrer" aria-label="View flutter-mvvm repository on GitHub">View repository <span
               aria-hidden="true">↗</span></a>
         </article>
       </div>
